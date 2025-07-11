@@ -1,0 +1,95 @@
+.button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Main';
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-size: var(--fs-sm);
+    padding: calc(var(--fs-sm) * 0.8) 16px;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+    border-radius: 16px;
+    width: 100%;
+
+    &:hover {
+
+        .button__text {
+            
+            &:first-child {
+                transform: translateY(-200%);
+            }
+
+            &:last-child {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    @media (min-width: 640px) {
+        width: max-content;
+        font-size: var(--fs-md);
+        padding: calc(var(--fs-md) * 0.8) 30px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: var(--fs-xl);
+        padding: calc(var(--fs-xl) * 0.8) 40px;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(var(--fs-sm) * 1.2);
+        overflow: hidden;
+
+        @media (min-width: 640px) {
+            height: calc(var(--fs-md) * 1.2);
+        }
+
+        @media (min-width: 1280px) {
+            height: calc(var(--fs-xl) * 1.2);
+        }
+
+    }
+
+    &__text {
+        display: block;
+        transition: transform 0.4s ease;
+
+        &:first-child {
+            transform: translateY(0);
+        }
+
+        &:last-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transform: translateY(200%);
+        }
+    }
+
+    /* Оранжевая кнопка */
+    &--primary {
+        background-color: var(--color-orange);
+        color: var(--color-white);
+    }
+
+    /* Белая кнопка */
+    &--secondary {
+        background-color: var(--color-white);
+        color: var(--color-dark);
+
+        &:hover {
+            background-color: var(--color-orange);
+            color: var(--color-white);
+
+        }
+    }
+}

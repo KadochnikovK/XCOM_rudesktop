@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    color: inherit;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Main';
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Main';
+}
+
+h2 {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+
+    word-break: break-word;
+    line-break: auto;
+
+    font-size: var(--fs-xl);
+
+    @media (min-width: 640px) {
+        font-size: var(--fs-4xl);
+    }
+
+    @media (min-width: 1200px) {
+        font-size: var(--fs-7xl);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--space-lg);
+    margin-bottom: var(--space-6xl);
+
+    @media (min-width: 640px) {
+        margin-bottom: calc(var(--space-6xl) * 2);
+    }
+
+    @media (min-width: 1200px) {
+        margin-bottom: calc(var(--space-6xl) * 3);
+    }
+}
+
+.content {
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+.headline {
+    font-weight: 600;
+    color: var(--color-orange);
+    margin-bottom: var(--space-base);
+
+    @media (min-width: 1200px) {
+        margin-bottom: var(--space-5xl);
+    }
+}
+
+.divider {
+    width: var(--fs-xxs);
+    min-width: var(--fs-xxs);
+    height: var(--fs-xxs);
+    border-radius: 10pc;
+    background-color: var(--color-orange);
+
+    &--second {
+        background-color: var(--color-blue);
+    }
+
+    @media (min-width: 640px) {
+        width: var(--fs-xs);
+        height: var(--fs-xs);
+    }
+
+    @media (min-width: 1200px) {
+        width: var(--fs-sm);
+        height: var(--fs-sm);
+    }
+
+}
+
+.map {
+    height: 664px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: var(--space-md);
+    overflow: hidden;
+
+    @media (min-width: 640px) {
+        height: 682px;
+        border-radius: var(--space-xl);
+    }
+
+    @media (min-width: 1200px) {
+        height: 722px;
+    }
+}

@@ -1,0 +1,110 @@
+.schedule {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-light-bg);
+        border-radius: var(--space-md);
+        padding: var(--space-md) var(--space-xl);
+
+        @media (min-width: 640px) {
+            padding: var(--space-md) var(--space-5xl);
+            border-radius: var(--space-xl);
+
+        }
+
+        @media (min-width: 1200px) {
+            padding: var(--space-md) var(--space-8xl);
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+        position: relative;
+        padding: var(--space-md) 0;
+
+        &:not(:nth-last-child(1)) {
+            border-bottom: 2px solid var(--color-grey-light);
+        }
+
+
+        @media (min-width: 640px) {
+            flex-direction: row;
+            gap: var(--space-lg);
+            align-items: center;
+            padding: var(--space-base) 0;
+        }
+
+        @media (min-width: 1200px) {
+            gap: var(--space-2xl);
+            padding: var(--space-5xl) 0;
+        }
+    }
+
+    &__time {
+        font-size: var(--fs-2xl);
+        font-weight: 600;
+        flex-shrink: 0;
+        color: var(--color-blue);
+        position: relative;
+        padding-left: 24px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 14px;
+            background-color: var(--color-orange);
+            border-radius: 50%;
+        }
+
+        @media (min-width: 640px) {
+            font-size: var(--fs-5xl);
+            width: 290px;
+            padding-left: 0;
+
+            &::before {
+                content: none;
+            }
+
+        }
+
+        @media (min-width: 1200px) {
+            font-size: var(--fs-8xl);
+            width: 380px;
+        }
+    }
+
+    &__divider {
+        display: none;
+
+        @media (min-width: 640px) {
+            display: block;
+        }
+    }
+
+    &__description {
+        font-size: var(--fs-sm);
+        line-height: var(--lh-md);
+        color: var(--color-dark);
+        font-family: 'Second';
+        font-weight: 400;
+
+        @media (min-width: 640px) {
+            flex: 1;
+            font-size: var(--fs-xl);
+            font-weight: 500;
+        }
+
+        @media (min-width: 1200px) {
+            flex: 1;
+            font-size: var(--fs-3xl);
+        }
+    }
+
+
+}

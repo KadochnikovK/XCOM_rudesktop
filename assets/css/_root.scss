@@ -1,0 +1,55 @@
+:root {
+    --max-width: 1600px;
+
+    --fs-xxxs: 12px;
+    --fs-xxs: 14px;
+    --fs-xs: 16px;
+    --fs-sm: 20px;
+    --fs-md: 24px;
+    --fs-lg: 28px;
+    --fs-xl: 32px;
+    --fs-2xl: 36px;
+    --fs-3xl: 40px;
+    --fs-4xl: 48px;
+    --fs-5xl: 52px;
+    --fs-6xl: 56px;
+    --fs-7xl: 64px;
+    --fs-8xl: 68px;
+    --fs-9xl: 80px;
+
+    --space-xxs: 4px;
+    --space-xs: 8px;
+    --space-sm: 12px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-base: 36px;
+    --space-2xl: 48px;
+    --space-3xl: 52px;
+    --space-4xl: 56px;
+    --space-5xl: 60px;
+    --space-6xl: 64px;
+    --space-7xl: 68px;
+    --space-8xl: 72px;
+
+    --color-blue: #083FA8;
+    --color-orange: #E36715;
+    --color-dark: #343434;
+    --color-white: #FFFFFF;
+    --color-light-bg: #FBFBFB;
+    --color-grey-light: #E6E6E6;
+    --color-red: #B41313;
+
+    /* Дополнительные производные цвета */
+ 
+    --lh-md: 1.2;
+
+    /* Границы */
+    --border-primary: 1px solid var(--color-grey-light);
+    --border-accent: 2px solid var(--color-orange);
+
+    /* Тени */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
