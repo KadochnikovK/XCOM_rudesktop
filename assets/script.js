@@ -274,7 +274,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 500);
     }
 
-    // Обработчики для закрытия модального окна
     const modalClose = formModal.querySelector(".modal__close");
     modalClose.addEventListener("click", closeFormModal);
 
@@ -305,16 +304,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const formItem = element.closest(".form__item");
         formItem.classList.add("form__item--not-valid");
 
-        // const errorElement = formItem.querySelector(".error-message");
-        // if (errorElement) {
-        //     errorElement.textContent = message;
-        //     errorElement.style.display = "block";
-        // } else {
-        //     const newErrorElement = document.createElement("div");
-        //     newErrorElement.className = "error-message";
-        //     newErrorElement.textContent = message;
-        //     formItem.appendChild(newErrorElement);
-        // }
     }
 
     const inputs = form.querySelectorAll("input, textarea");
@@ -328,7 +317,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (formItem) {
             formItem.classList.add("form__item--focused");
 
-            // Находим лейбл и добавляем ему класс
             const label = formItem.querySelector("label");
             if (label) {
                 label.classList.add("label--focused");
@@ -340,8 +328,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const formItem = e.target.closest(".form__item");
         if (formItem) {
             formItem.classList.remove("form__item--focused");
-
-            // Находим лейбл и убираем класс
             const label = formItem.querySelector("label");
             if (label) {
                 label.classList.remove("label--focused");
