@@ -1,0 +1,108 @@
+.speakers {
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        @media(min-width: 640px) {
+
+            gap: 30px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-light-bg);
+        padding: var(--space-md);
+        border-radius: var(--space-lg) var(--space-md);
+        z-index: 2;
+
+
+        @media(min-width: 640px) {
+            row-gap: var(--space-md);
+            border-radius: var(--space-xl);
+            padding: var(--space-5xl) var(--space-base);
+        }
+
+
+        @media(min-width: 1200px) {
+            row-gap: var(--space-lg);
+            padding: var(--space-7xl);
+        }
+    }
+
+    &__item {
+        display: flex;
+        padding: 20px;
+        max-width: 900px;
+        margin: auto;
+        border-radius: 20px;
+        background-color: var(--color-grey-blue);
+        width: 100%;
+        align-items: center;
+        gap: 20px;
+
+        @media(min-width: 640px) {
+            padding: 40px;
+            gap: 30px;
+            border-radius: 40px;
+        }
+
+
+        @media(min-width: 1200px) {}
+
+    }
+
+    &__photo {
+        width: 90px;
+        height: 90px;
+        border-radius: 20px;
+        object-fit: cover;
+
+        @media(min-width: 640px) {
+            width: 200px;
+            height: 200px;
+            border-radius: 33px;
+        }
+
+
+        @media(min-width: 1200px) {
+            width: 230px;
+            height: 230px;
+        }
+    }
+
+    &__name {
+        font-size: var(--fs-sm);
+        line-height: var(--lh-md);
+        color: var(--color-dark);
+        font-family: 'Second';
+        font-weight: 400;
+
+        @media (min-width: 640px) {
+            flex: 1;
+            font-size: var(--fs-xl);
+            font-weight: 500;
+        }
+
+        @media (min-width: 1200px) {
+            flex: 1;
+            font-size: var(--fs-3xl);
+        }
+    }
+
+    &__description {
+        color: var(--color-grey);
+        font-size: var(--fs-xxs);
+
+        @media (min-width: 640px) {
+            flex: 1;
+            font-size: var(--fs-lg);
+            font-weight: 500;
+        }
+    }
+}

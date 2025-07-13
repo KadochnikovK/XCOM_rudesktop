@@ -17,6 +17,10 @@
         max-width: 350px;
         position: relative;
         margin: var(--space-lg);
+
+        &--full {
+            max-width: max-content;
+        }
     }
 
     &__close {
@@ -64,6 +68,10 @@
         font-size: var(--fs-md);
         color: var(--color-orange);
         font-weight: 600;
+
+        @media(min-width: 640px) {
+            font-size: var(--fs-xl);
+        }
 
     }
 

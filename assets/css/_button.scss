@@ -12,11 +12,11 @@
     font-size: var(--fs-sm);
     padding: calc(var(--fs-sm) * 0.8) 16px;
     transition: background-color 0.4s ease, border-color 0.4s ease;
-    border-radius: 16px;
+    border-radius: 10pc;
     width: 100%;
 
     &:hover {
-
+        background-color: var(--color-orange-dark);
         .button__text {
             
             &:first-child {

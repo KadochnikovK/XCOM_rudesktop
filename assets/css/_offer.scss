@@ -2,6 +2,9 @@
     height: calc(100vh - var(--space-lg) * 2);
     color: var(--color-white);
     display: flex;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
 
     &__content {
         display: flex;
@@ -10,10 +13,10 @@
         width: 100%;
         height: 100%;
         padding: var(--space-md);
-        border-radius: 20px;
+        border-radius: 0 0 30px 30px;
 
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background.png);
-        // background-color: var(--color-dark);
+        // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background.png);
+        background-color: var(--color-blue);
         background-size: cover;
     }
 
@@ -32,7 +35,8 @@
     }
 
     &__description {
-        display: inline-flex;
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
         font-family: 'Second';
         font-weight: 500;
@@ -44,15 +48,25 @@
         }
     }
 
+    &__description-item {
+        background-color: rgba(255, 255, 255, .3);
+        padding: 1rem;
+        border-radius: 1pc;
+    }
+
     &__headline {
         font-size: var(--fs-2xl);
         color: var(--color-white) !important;
         margin-bottom: var(--space-md);
+        word-wrap: break-word;
+        hyphens: auto;
+        line-height: 1.6;
     }
 
     &__logo {
-        transform: translateY(16%);
-        height: var(--fs-2xl);
+        transform: translateY(26%);
+        height: calc(var(--fs-3xl) * 1.2);
+
     }
 
     &__button {
@@ -60,6 +74,12 @@
     }
 
     @media (min-width: 640px) {
+
+
+
+        &__content {
+            border-radius: 0 0 60px 60px;
+        }
 
         &__wrapper {
             gap: var(--space-xl);
@@ -69,19 +89,28 @@
 
         &__description {
             font-size: var(--fs-2xl);
-            gap: var(--space-xl);
+            gap: var(--space-xl);  
+            
+            &:nth-child(1) {
+                margin-top: 0;
+            }
         }
 
         &__headline {
-            font-size: var(--fs-8xl);
+            font-size: var(--fs-6xl);
         }
 
         &__logo {
-            height: var(--fs-8xl);
+            height: calc(var(--fs-6xl) * 1.4);
         }
     }
 
     @media (min-width: 1200px) {
+        &__headline {
+            word-wrap: normal;
+            hyphens: none;
+        }
+
         &__wrapper {
             gap: var(--space-xl);
             padding: var(--space-6xl);
@@ -89,15 +118,15 @@
         }
 
         &__description {
-            font-size: var(--fs-4xl);
+            // font-size: var(--fs-4xl);
         }
 
         &__headline {
-            font-size: var(--fs-9xl);
+            // font-size: var(--fs-8xl);
         }
 
         &__logo {
-            height: var(--fs-9xl);
+            // height: calc(var(--fs-8xl) * 1.4);
         }
     }
 }
